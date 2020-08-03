@@ -1,0 +1,3 @@
+minecraft:planks[variant=oak] -> minecraft:oak_planks
+
+

@@ -13969,14 +13969,8 @@
     "battlefields:dragon_death_emitter": {
       "default": "facing=north,waterlogged=false",
       "states": {
-        "facing=north,waterlogged=true": 0,
-        "facing=north,waterlogged=false": 0,
-        "facing=south,waterlogged=true": 0,
-        "facing=south,waterlogged=false": 0,
-        "facing=west,waterlogged=true": 0,
-        "facing=west,waterlogged=false": 0,
-        "facing=east,waterlogged=true": 0,
-        "facing=east,waterlogged=false": 0
+        "waterlogged=true": 0,
+        "waterlogged=false": 0
       }
     },
     "battlefields:barrier": {
@@ -14571,6 +14565,12 @@
         "rune_state=pulse": 0,
         "rune_state=activated": 0
       }
+    },
+    "battlefields:runed_end_stone": {
+    },
+    "battlefields:deactivated_runed_end_stone": {
+    },
+    "battlefields:activated_runed_end_stone": {
     },
     "battlefields:runed_end_stone_stairs": {
       "default": "facing=north,half=bottom,shape=straight,waterlogged=false",
@@ -15237,46 +15237,16 @@
       }
     },
     "battlefields:runic_end_stone_a": {
-      "default": "activated=false",
-      "states": {
-        "activated=true": 0,
-        "activated=false": 0
-      }
     },
     "battlefields:runic_end_stone_b": {
-      "default": "activated=false",
-      "states": {
-        "activated=true": 0,
-        "activated=false": 0
-      }
     },
     "battlefields:runic_end_stone_c": {
-      "default": "activated=false",
-      "states": {
-        "activated=true": 0,
-        "activated=false": 0
-      }
     },
     "battlefields:runic_end_stone_d": {
-      "default": "activated=false",
-      "states": {
-        "activated=true": 0,
-        "activated=false": 0
-      }
     },
     "battlefields:runic_end_stone_e": {
-      "default": "activated=false",
-      "states": {
-        "activated=true": 0,
-        "activated=false": 0
-      }
     },
     "battlefields:runic_end_stone_f": {
-      "default": "activated=false",
-      "states": {
-        "activated=true": 0,
-        "activated=false": 0
-      }
     },
     "battlefields:white_bouncy_block": {
     },
