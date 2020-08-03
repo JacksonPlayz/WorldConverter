@@ -1,0 +1,43 @@
+Running from directory: C:\Users\jacks\Documents\Minecraft Development\WorldConverter
+CPU Cores: 4
+Max Memory: 3803
+Selected: folder: C:\Users\jacks\Documents\Battlefields Development\112to115\world
+Detected format: WORLD and Version: 1.12
+Selected item: WORLD
+Selected item: 1.12
+Selected item: WORLD
+Selected item: 1.14
+Selected item: 1.15
+
+Running with config:
+ - Input:
+   + File:    C:\Users\jacks\Documents\Battlefields Development\112to115\world
+   + Format:  WORLD
+   + Version: 1.12
+ - Output:
+   + File:    
+   + Format:  WORLD
+   + Version: 1.15
+   + Custom: 
+
+Loading custom GameData C:\Users\jacks\Documents\Battlefields Development\112to115\world\game_data.json
+Synchronising GameData ids with level.dat
+Loading game data for version  1.15
+Loading 13467 BlockStates
+java.io.FileNotFoundException: C:\Users\jacks\Documents\Minecraft Development\WorldConverter\ConverterCore\build\classes\java\main (Access is denied)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:126)
+	at me.dags.converter.resource.jar.JarContainer.<init>(JarContainer.java:21)
+	at me.dags.converter.resource.Container.open(Container.java:59)
+	at me.dags.converter.resource.Container.open(Container.java:52)
+	at me.dags.converter.resource.Container.self(Container.java:48)
+	at me.dags.converter.datagen.Mappings.builtIn(Mappings.java:44)
+	at me.dags.converter.converter.world.WorldConverter.convert(WorldConverter.java:64)
+	at me.dags.converter.Main.convertWorld(Main.java:103)
+	at me.dags.converter.Main.convert(Main.java:92)
+	at me.dags.converter.GUIConverter.run(GUIConverter.java:242)
+	at me.dags.converter.GUIConverter.lambda$null$11(GUIConverter.java:155)
+	at java.lang.Thread.run(Thread.java:748)
+

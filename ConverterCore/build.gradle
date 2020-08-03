@@ -1,6 +1,24 @@
+buildscript {
+    repositories {
+        maven { url = "https://plugins.gradle.org/m2/" }
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.github.jengelman.gradle.plugins:shadow:4.0.2"
+    }
+}
+
 plugins {
-    id "com.github.johnrengelman.shadow" version "4.0.2"
     id "java"
+}
+
+def shadowId = 'com.github.johnrengelman.shadow'
+final hasPlugin = project.getPlugins().hasPlugin(shadowId);
+if (hasPlugin) {
+    println 'Plugin already applied'
+} else {
+    apply plugin: "com.github.johnrengelman.shadow"
 }
 
 sourceCompatibility = targetCompatibility = "1.8"

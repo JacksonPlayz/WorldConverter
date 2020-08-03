@@ -62,14 +62,14 @@ public class V1_14 implements Version {
                 continue;
             }
             JsonObject block = entry.getValue().getAsJsonObject();
-            JsonArray states = block.getAsJsonArray("states");
+            JsonObject states = block.getAsJsonObject("states");
             if (states == null) {
                 CompoundTag data = Serializer.deserialize(entry.getKey());
                 BlockState blockState = new BlockState(++stateId, data, false);
                 blocks.add(blockState);
             } else {
-                for (JsonElement state : states) {
-                    CompoundTag data = Serializer.deserialize(entry.getKey(), state.getAsString());
+                for (String state : states.keySet()) {
+                    CompoundTag data = Serializer.deserialize(entry.getKey(), state);
                     BlockState blockState = new BlockState(++stateId, data, false);
                     blocks.add(blockState);
                 }
@@ -90,7 +90,7 @@ public class V1_14 implements Version {
             int count = 0;
             for (Map.Entry<String, JsonElement> entry : json.getAsJsonObject("blocks").entrySet()) {
                 if (entry.getValue().isJsonObject()) {
-                    JsonArray states = entry.getValue().getAsJsonObject().getAsJsonArray("states");
+                    JsonObject states = entry.getValue().getAsJsonObject().getAsJsonObject("states");
                     if (states == null) {
                         count += 1;
                     } else {
